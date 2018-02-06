@@ -1,6 +1,6 @@
 import { h } from 'preact';
 import styled from 'styled-components';
-import getDay from 'date-fns/get_day'
+import getDay from 'date-fns/get_day';
 
 const Container = styled.main`
   font-family: 'Pacifico', cursive;
@@ -32,7 +32,7 @@ const Is = styled.span`
     margin: -0 30px;
     top: -5px;
   }
-`
+`;
 
 const Xmas = styled.span`
   font-family: 'Changa One', sans-serif;
@@ -50,7 +50,7 @@ const Xmas = styled.span`
      font-size: 50px;
        letter-spacing: 10px;
   }
-`
+`;
 
 const Tuesday = styled.span`
   font-family: 'PT Sans', sans-serif;
@@ -75,19 +75,19 @@ const Tuesday = styled.span`
   &:after {
     margin: 7px 0 0 10px;
   }
-`
+`;
 const date = new Date();
 const year = date.getFullYear();
-const Days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const Days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const Day = new Date(year, 11, 25);
 
 const Home = () => (
-  <Container>
-    <Is>Is</Is>
-    <Xmas>Christmas on a Friday 13th?</Xmas>
-    <Tuesday>No, It's a fucking {Days[getDay(Day)]}</Tuesday>
-  </Container>
+	<Container>
+		<Is>Is</Is>
+		<Xmas>Christmas on a Friday 13th?</Xmas>
+		<Tuesday>No, It's a fucking {Days[getDay(Day)]}</Tuesday>
+	</Container>
 );
 
 
-export default Home
+export default Home;
